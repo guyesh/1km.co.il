@@ -50,7 +50,6 @@ function EditRow({ created_at, diff = {}, userId, protestId, id }) {
   useEffect(() => {
     if (expanded) {
       fetchProtest(protestId).then((p) => {
-        console.log(protestId);
         if (p) {
           setProtest(p);
         }
@@ -163,7 +162,6 @@ const ProtestEditCard = styled.div`
 
   @media (max-width: 1340px) {
     flex-direction: rows;
-    /* align-items: flex-start; */
   }
 `;
 const ButtonsEditCards = styled(Button)`
@@ -173,7 +171,7 @@ const ButtonsEditCards = styled(Button)`
   margin: 0px 5px;
 `;
 const DataField = styled.div`
-  padding: '16px';
-  width: 100%;
   display: block;
+  padding: 16px;
+  width: 100%;
 `;
